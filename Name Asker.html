@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <title>Name Asker</title>
+</head>
+<body>
+    <form onsubmit="hellojavascript()">
+    <input id="name" placeholder="Name"></input>
+    <input type="submit" value="Submit"></input>
+    </form>
+    <script>
+        var hellojavascript = function() {
+            var name = document.getElementById("name").value;
+            alert("Hello, "+name+"!"); 
+        }
+    </script>
+</body>

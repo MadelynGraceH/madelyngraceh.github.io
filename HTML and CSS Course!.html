@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML/CSS Course!</title>
+        <style>
+            .col {
+                width:50%;
+                float:left;
+            }
+            .textarea {
+                width:90%;
+                height:500px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>Full screen mode is recommended for videos and challenges.</p>
+        <h2>Headings and Paragraphs</h2>
+        <video controls width=300 height=300>
+            <source src="Headings and P.mp4" type="video/mp4">
+        </video>
+        <h2>Challenge: All about plants</h2>
+        <p>Now that you know about text and titles, make a webpage describing plants! Then, change the title to "All About Plants"!</p>
+        <form onsubmit="return run()">
+            <div class="col">
+                <textarea class="textarea" width="100%" id="all_about_plants"><DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+    </body>
+</html>
+                </textarea>
+                <input type="submit" value="Run"></input> 
+            
+            </div>
+            <div class="col">
+            <iframe height="500px" id="challengeOutput" srcdoc="<br />" src="demo_iframe_srcdoc.htm"></iframe>
+            </div>
+        </form>
+        <form onsubmit="submit_code()">
+            <input type="submit" value="Submit"></input>
+        </form>
+
+        <script>
+            var learning_points = 0;
+            var challengeOutput = document.getElementById("challengeOutput");
+            var run = function() {
+                var code = document.getElementById("all_about_plants").value;
+                challengeOutput.srcdoc = code;
+                return false;
+            }
+            var submit = function() {
+                <h3>Congratulations! You earned 1050 learning points!</h3>
+                learning_points+=1050;
+            }
+            draw = function() {
+                if (scrollX === 0) {
+                    background(255, 255, 255)
+                    text("Learning points: "+learing_points, 300, 200)
+                }
+                else {
+                    background(255, 255, 255)
+                }
+            }
+        </script>
+    </body>
+</html>
