@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>HTML/CSS Course!</title>
+        <script src="lessons.js"></script>
         <style>
             .col {
                 width:50%;
@@ -11,20 +12,30 @@
                 width:90%;
                 height:500px;
             }
+            #pointsBox {
+                position: fixed;
+                top: 20px;
+                right: 10px;
+                width: 150px;
+                background: magenta;
+                padding: 20px;
+                border: 10px red;
+                border-style: ridge;
+            }
         </style>
     </head>
 
     <body>
         <p>Full screen mode is recommended for videos and challenges.</p>
-        <h2>Headings and Paragraphs</h2>
+        <h2 id="lessonTitle"></h2>
         <video controls width=300 height=300>
-            <source src="Headings and P.mp4" type="video/mp4">
+            <source id="video" src="Headings and P.mp4" type="video/mp4">
         </video>
-        <h2>Challenge: All about plants</h2>
-        <p>Now that you know about text and titles, make a webpage describing plants! Then, change the title to "All About Plants"!</p>
+        <h2 id="challengeTitle"></h2>
+        <p id="challengeDescription"></p>
         <form onsubmit="return run()">
             <div class="col">
-                <textarea class="textarea" width="100%" id="all_about_plants"><DOCTYPE html>
+                <textarea class="textarea" width="100%" id="all_about_plants"><!DOCTYPE html>
 <html>
     <head>
 
@@ -42,11 +53,17 @@
             <iframe height="500px" id="challengeOutput" srcdoc="<br />" src="demo_iframe_srcdoc.htm"></iframe>
             </div>
         </form>
-        <form onsubmit="submit_code()">
+        <form onsubmit="return submitCode()">
             <input type="submit" value="Submit"></input>
         </form>
-
+    <div id="pointsBox">
+        <h3>Learning points: <span id="points">0</span></h3>
+    </div> 
+    <button onclick="nextLesson()" id="nextButton">Next lesson</button>
         <script>
+            var lessonNumber = 0;
+            loadLesson(lessonNumber)
+            var codeHasBeenSubmited = false;
             var learning_points = 0;
             var challengeOutput = document.getElementById("challengeOutput");
             var run = function() {
@@ -54,19 +71,23 @@
                 challengeOutput.srcdoc = code;
                 return false;
             }
-            var submit = function() {
-                <h3>Congratulations! You earned 1050 learning points!</h3>
-                learning_points+=1050;
+            var submitCode = function() {
+                if (codeHasBeenSubmited === false) {
+                    learning_points += 1050;
+                    document.getElementById("points").innerHTML = learning_points
+                    codeHasBeenSubmited = true;
+                } 
+                return false
             }
-            draw = function() {
-                if (scrollX === 0) {
-                    background(255, 255, 255)
-                    text("Learning points: "+learing_points, 300, 200)
-                }
-                else {
-                    background(255, 255, 255)
-                }
+            var nextLesson = function() {
+                lessonNumber++;
+                loadLesson(lessonNumber)
+                window.scrollTo(0,0)
+                if (lessons.length < lessonNumber) {
+                    document.getElementById("nextButton").disabled = true;
+                } 
             }
+            
         </script>
     </body>
 </html>
