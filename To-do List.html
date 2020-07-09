@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-do List</title>
+    </head>
+
+    <body>
+        <h1>To-do list</h1>
+        <input id="addToList" placeholder="Add to list">
+        <button onclick="add()">Add</button>
+        <ol id="list">
+            
+        </ol>
+        <script>
+            var list = [];
+            var add = function() {
+                listItem = document.getElementById("addToList").value;               
+                list.push(listItem);
+                var html = "";
+                for (var i = 0; i < list.length; i++) {
+                    html += "<li>"+list[i]+"</li>";
+                }
+                document.getElementById("list").innerHTML = html
+                document.getElementById("addToList").value = "";
+            }
+        </script>
+    </body>
+</html>

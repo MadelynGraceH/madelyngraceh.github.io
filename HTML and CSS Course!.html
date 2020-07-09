@@ -28,14 +28,15 @@
     <body>
         <p>Full screen mode is recommended for videos and challenges.</p>
         <h2 id="lessonTitle"></h2>
-        <video controls width=300 height=300>
-            <source id="video" src="Headings and P.mp4" type="video/mp4">
+        <video id="video" controls width=300 height=300>
+            <source id="videoSource" src="Headings and P.mp4" type="video/mp4">
         </video>
-        <h2 id="challengeTitle"></h2>
-        <p id="challengeDescription"></p>
-        <form onsubmit="return run()">
-            <div class="col">
-                <textarea class="textarea" width="100%" id="all_about_plants"><!DOCTYPE html>
+        <div id="challenge">
+            <h2 id="challengeTitle"></h2>
+            <p id="challengeDescription"></p>
+            <form onsubmit="return run()">
+                <div class="col">
+                    <textarea class="textarea" width="100%" id="all_about_plants"><!DOCTYPE html>
 <html>
     <head>
 
@@ -45,22 +46,28 @@
 
     </body>
 </html>
-                </textarea>
-                <input type="submit" value="Run"></input> 
-            
-            </div>
-            <div class="col">
-            <iframe height="500px" id="challengeOutput" srcdoc="<br />" src="demo_iframe_srcdoc.htm"></iframe>
-            </div>
-        </form>
-        <form onsubmit="return submitCode()">
-            <input type="submit" value="Submit"></input>
-        </form>
+                    </textarea>
+                    <input type="submit" value="Run"></input> 
+                
+                </div>
+                <div class="col">
+                <iframe height="500px" id="challengeOutput" srcdoc="<br />" src="demo_iframe_srcdoc.htm"></iframe>
+                </div>
+            </form>
+            <form onsubmit="return submitCode()">
+                <input type="submit" value="Submit"></input>
+            </form>
+        </div>
+        <div id="reading">
+            <h2 id="readingTitle"></h2>
+            <p id="readingBody"></p>
+        </div>
     <div id="pointsBox">
         <h3>Learning points: <span id="points">0</span></h3>
     </div> 
     <button onclick="nextLesson()" id="nextButton">Next lesson</button>
         <script>
+            window.scrollTo(0, 0)
             var lessonNumber = 0;
             loadLesson(lessonNumber)
             var codeHasBeenSubmited = false;
@@ -83,7 +90,8 @@
                 lessonNumber++;
                 loadLesson(lessonNumber)
                 window.scrollTo(0,0)
-                if (lessons.length < lessonNumber) {
+                codeHasBeenSubmited = false;
+                if (lessonNumber >= lessons.length-1) {
                     document.getElementById("nextButton").disabled = true;
                 } 
             }
