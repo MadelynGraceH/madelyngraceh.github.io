@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mad-Libs | Play</title>
+        <style>
+            body {
+                background-color:violet;
+            }
+        </style>
+    </head>
+
+    <body></body>
+        <input id="living_thing" placeholder="Enter a noun."></input>
+        <input id="always_does" placeholder="Enter a verb(past-tense)."></input>
+        <button onclick="submit()">Submit</button>
+        <p id="story"></p>
+        <script>
+            var submit = function() {
+                document.getElementById("story").innerText = "Once upon a time, there was a "+document.getElementById("living_thing").value+" who "+document.getElementById("always_does").value+" all the time."
+            }  
+        </script>
+    </body>
+</html>

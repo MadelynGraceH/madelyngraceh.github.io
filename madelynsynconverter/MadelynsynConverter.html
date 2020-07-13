@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Madelynsyn Converter - Free online converter</title>
+        <style>
+        body {
+            background-color:rgb(3, 173, 252);
+        }
+        #madelynsyn {
+            color:thistle;
+            font-family: cursive;
+        }
+        #converter {
+            color:violet;
+            font-family: monospace;
+        }
+        #file:hover {
+            background-color:rgb(203, 108, 208);
+        }
+        #file {
+            background-color: seagreen;
+        }
+        h1 {
+            background-color:purple;
+        }
+        p {
+            color: red;
+        }
+        p:hover {
+                background-color: rgb(203, 203, 301);
+            }
+        h1:hover {
+            background-color:  rgb(225, 65, 190);
+        }
+           
+        </style>
+    </head>
+
+    <body>
+        <h1><span id="madelynsyn">Madelynsyn</span> <span id="converter">Converter</span></h1>
+        <p>1. Choose file</p>
+        <input type="file" id="file"></input>
+        <br>
+        <br>
+        <p>2. Convert to... </p>
+        <select>
+            <optgroup label="Image formats">
+                <option value="3fr">3fr</option>
+                <option value="arw">arw</option>
+                <option value="bmp">bmp</option>
+                <option value="cr2">cr2</option>
+                <option value="crw">crw</option>
+                <option value="dng">dng</option>
+                <option value="dwg">dwg</option>
+                <option value="dxf">dxf</option>
+                <option value="emf">emf</option>
+                <option value="eps">eps</option>
+                <option value="erf">erf</option>
+                <option value="gif">gif</option>
+                <option value="heic">heic</option>
+                <option value="ico">ico</option>
+                <option value="jpg">jpg</option>
+                <option value="jpeg">jpeg</option>
+                <option value="mdi">mdi</option>
+                <option value="mrw">mrw</option>
+                <option value="nef">nef</option>
+                <option value="odg">odg</option>
+                <option value="orf">orf</option>
+                <option value="pcx">pcx</option>
+                <option value="pef">pef</option>
+                <option value="png">png</option>
+                <option value="ppm">ppm</option>
+                <option value="psd">psd</option>
+                <option value="raf">raf</option>
+                <option value="svg">svg</option>
+                <option value="tga">tga</option>
+                <option value="tif">tif</option>
+                <option value="tiff">tiff</option>
+                <option value="wbmp">wbmp</option>
+                <option value="webp">webp</option>
+                <option value="wmf">wmf</option>
+                <option value="x3f">x3f</option>
+                <option value="xcf">xcf</option>
+            </optgroup>
+            <optgroup label="Document formats">
+                <option value="csv">csv</option>
+                <option value="djvu">djvu</option>
+                <option value="doc">doc</option>
+                <option value="docx">docx</option>
+                <option value="eml">eml</option>
+                <option value="html">html</option>
+                <option value="html4">html4</option>
+                <option value="html5">html5</option>
+                <option value="key">key</option>
+                <option value="key09">key09</option>
+                <option value="key.zip">key.zip</option>
+                <option value="msg">msg</option>
+                <option value="numbers">numbers</option>
+                <option value="numbers09">numbers09</option>
+                <option value="numbers.zip">numbers.zip</option>
+                <option value="odp">odp</option>
+                <option value="ods">ods</option>
+                <option value="odt">odt</option>
+                <option value="pages">pages</option>
+                <option value="pages09">pages09</option>
+                <option value="pages.zip">pages.zip</option>
+                <option value="pcx">pcx</option>
+                <option value="pdf">pdf</option>
+                <option value="pps">pps</option>
+                <option value="ppsx">ppsx</option>
+                <option value="ppt">ppt</option>
+                <option value="pptx">pptx</option>
+                <option value="ps">ps</option>
+                <option value="pub">pub</option>
+                <option value="rtf">rtf</option>
+                <option value="txt">txt</option>
+                <option value="vsd">vsd</option>
+                <option value="wks">wks</option>
+                <option value="wpd">wpd</option>
+                <option value="wps">wps</option>
+                <option value="xls">xls</option>
+                <option value="xlr">xlr</option>
+                <option value="xlsx">xlsx</option>
+                <option value="xml">xml</option>
+                <option value="xps">xps</option>
+            </optgroup>
+            <optgroup label="Music formats">
+                <option value="aac">aac</option>
+                <option value="ac3">ac3</option>
+                <option value="aif">aif</option>
+                <option value="aifc">aifc</option>
+                <option value="aiff">aiff</option>
+                <option value="amr">amr</option>
+                <option value="caf">caf</option>
+                <option value="flac">flac</option>
+                <option value="m4a">m4a</option>
+                <option value="m4b">m4b</option>
+                <option value="m4r">m4r</option>
+                <option value="mid">mid</option>
+                <option value="midi">midi</option>
+                <option value="mmf">mmf</option>
+                <option value="mp3">mp3</option>
+                <option value="oga">oga</option>
+                <option value="ogg">ogg</option>
+                <option value="ra">ra</option>
+                <option value="ram">ram</option>
+                <option value="wav">wav</option>
+                <option value="wma">wma</option>
+            </optgroup>
+            <optgroup label="Video formats">
+                <option value="264">264</option>
+                <option value="3ga">3ga</option>
+                <option value="3gp">3gp</option>
+                <option value="3gpp">3gpp</option>
+                <option value="3g2">3g2</option>
+                <option value="asf">asf</option>
+                <option value="avi">avi</option>
+                <option value="f4v">f4v</option>
+                <option value="flv">flv</option>
+                <option value="gvi">gvi</option>
+                <option value="ipad">ipad</option>
+                <option value="iphone">iphone</option>
+                <option value="ipod">ipod</option>
+                <option value="m2ts">m2ts</option>
+                <option value="m4v">m4v</option>
+                <option value="mkv">mkv</option>
+                <option value="mod">mod</option>
+                <option value="mov">mov</option>
+                <option value="mp4">mp4</option>
+                <option value="mpg">mpg</option>
+                <option value="mpeg">mpeg</option>
+                <option value="mts">mts</option>
+                <option value="ogg">ogg</option>
+                <option value="rm">rm</option>
+                <option value="rmvb">rmvb</option>
+                <option value="vob">vob</option>
+                <option value="webm">webm</option>
+                <option value="wmv">wmv</option>
+                <option value="ts">ts</option>
+            </optgroup>
+            <optgroup label="E-book formats">
+                <option value="azw">azw</option>
+                <option value="azw3">azw3</option>
+                <option value="cbz">cbz</option>
+                <option value="cbr">cbr</option>
+                <option value="cbc">cbc</option>
+                <option value="chm">chm</option>
+                <option value="epub">epub</option>
+                <option value="fb2">fb2</option>
+                <option value="lit">lit</option>
+                <option value="lrf">lrf</option>
+                <option value="mobi">mobi</option>
+                <option value="prc">prc</option>
+                <option value="pdb">pdb</option>
+                <option value="pml">pml</option>
+                <option value="rb">rb</option>
+                <option value="tcr">tcr</option>
+            </optgroup>
+            <optgroup label="Compressed formats">
+                <option value="7z">7z</option>
+                <option value="tar.bz2">tar.bz2</option>
+                <option value="cab">cab</option>
+                <option value="lzh">lzh</option>
+                <option value="rar">rar</option>
+                <option value="tar">tar</option>
+                <option value="tar.gz">tar.gz</option>
+                <option value="yz1">yz1</option>
+                <option value="zip">zip</option>
+            </optgroup>
+            <optgroup label="Video presets">
+                <option value="Apple TV">Apple TV</option>
+                <option value="Blackberry">Blackberry</option>
+                <option value="DVD">DVD</option>
+                <option value="FLV for web use">FLV for web use</option>
+                <option value="Galaxy Tab">Galaxy Tab</option>
+                <option value="HTC Desire">HTC Desire</option>
+                <option value="HTC Dream">HTC Dream</option>
+                <option value="HTC Droid Eris">HTC Droid Eris</option>
+                <option value="HTC Hero">HTC Hero</option>
+                <option value="HTC Magic">HTC Magic</option>
+                <option value="iPad">iPad</option>
+                <option value="iPhone4">iPhone4</option>
+                <option value="iPhone">iPhone</option>
+                <option value="iPod Touch">iPod Touch</option>
+                <option value="Kindle Fire">Kindle Fire</option>
+                <option value="Motorola Cliq">Motorola Cliq</option>
+                <option value="Motorola DEXT">Motorola DEXT</option>
+                <option value="Motorola DROID">Motorola DROID</option>
+                <option value="Motorola Xoom">Motorola Xoom</option>
+                <option value="myTouch">myTouch</option>
+                <option value="Nexus One">Nexus One</option>
+                <option value="Nokia">Nokia</option>
+                <option value="PS3">PS3</option>
+                <option value="PSP">PSP</option>
+                <option value="Samsung Behold II">Samsung Behold II</option><option value="Vimeo">Vimeo</option><option value="Wii">Wii</option><option value="Xbox360">Xbox360</option><option value="YouTube">YouTube</option><option value="Zune">Zune</option></optgroup>
+            </optgroup>
+        </select>
+        <br>
+        <br>
+        <p>3. Convert</p>
+        <input type="button" value="Convert"></input>
+        <h2>Change background color</h2>
+        <input type="color" id="backgroundColor"></input>
+        <input type="button" onclick="changeBackgroundColor()" value="Change"></input>
+        <script>
+            var file;
+            var convert = function() {
+                file = document.getElementById("file").value;
+d
+            }
+            var changeBackgroundColor = function() {
+                document.body.style.backgroundColor = document.getElementById("backgroundColor").value;
+            }
+        </script>
+    </body>
+</html>

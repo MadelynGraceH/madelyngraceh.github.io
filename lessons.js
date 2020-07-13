@@ -52,8 +52,19 @@ var lesson4 = {
 	}
 }
 
+var lesson5 = {
+	"title": "Sorting By Id",
+	"description": "",
+	"video": "videos/5_sorting_by_id.mp4",
+	"challenge": {
+		"title": "Specific Sortings",
+		"description": "Now that you can be more specific about CSS selectors, make a webpage that has a lot of each heading and paragraph that are different colors."
+	},
+	"reading": ""
+}
 
-var lessons = [lesson1, lesson2, lesson3, lesson4]
+
+var lessons = [lesson1, lesson2, lesson3, lesson4, lesson5]
 var loadLesson = function(lessonNumber) {
     var lesson = lessons[lessonNumber]
     document.getElementById("lessonTitle").innerText = lesson.title;
